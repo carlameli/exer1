@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="script.js"> </script>
 </head>
 <body>
 
@@ -15,33 +16,6 @@
         <button id="submit" type="submit"> Enviar  </button>
         
      </form>
-
-
-    <script> 
-    console.log(totalVogais("Acessibilidade"))
-    const button = document.getElementById("submit");
-
-
-    button.onclick=function(){
-        const input=document.getElementById('palavra');
-        window.alert('Total de Vogais:' + totalVogais(input.value));
-
-    }
-    
-    function totalVogais(palavra) {
-        let total = 0;
-        for (let index = 0; index < palavra.length; index++) {
-            const letra = palavra[index].toLowerCase();
-            if(letra==='a' || letra==='e' || letra==='i' || letra==='o' || letra==='u') {
-                total ++
-
-            }
-            
-        }
-        return total;
-
-    }
-    </script>
   
 
     
