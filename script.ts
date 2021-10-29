@@ -1,20 +1,20 @@
 window.onload = function (): void {
-    const button = document.getElementById("submit");
-    const input = document.getElementById('palavra') as HTMLInputElement;
+    const button: HTMLElement | null = document.getElementById("submit");
+    const input: HTMLInputElement = document.getElementById('palavra') as HTMLInputElement;
     if (button && input) {
         button.onclick = function () {
-            window.alert('Total de Vogais: cd ..' + totalVogais(input.value));
+            window.alert('Total de Vogais: ' + totalVogais(input.value));
         }
     }
 }
 
 let totalVogais = function (palavra: string): number {
-    let total = 0;
-    let vogais = "aeiou"
-    for (let index = 0; index < palavra.length; index++) {
-        const letra = palavra[index].toLowerCase();
+    let total: number = 0;
+    let vogais: string = "aeiou";
+    for (let index: number = 0; index < palavra.length; index++) {
+        const letra: string = palavra[index].toLowerCase();
         if (vogais.includes(letra)) {
-            total++
+            total++;
         }
     }
     return total;
